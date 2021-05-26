@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+}
+
+.container-validator {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-credits-images-container {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 102px;
+  height: 64px;
+  cursor: pointer;
+}
+
+[data-card="Visa"] {
+  background: url("../img/visa.png") no-repeat center;
+  background-size: contain;
+}
+
+[data-card="Mastercard"] {
+  background: url("../img/mastercard.png") no-repeat center;
+  background-size: contain;
+}
+
+[data-card="American-express"] {
+  background: url("../img/american_express.png") no-repeat center;
+  background-size: contain;
+}
+
+[data-card="Discover"] {
+  background: url("../img/discover.png") no-repeat center;
+  background-size: contain;
+}
+
+[data-card="Mir"] {
+  background: url("../img/mir.jpg") no-repeat center;
+  background-size: contain;
+}
+
+.card-image-wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.active:before {
+  opacity: 0;
+}
+
+.validate-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  height: 35px;
+  border: 1px solid #dadce0;
+  padding-left: 10px;
+  color: #656b6b;
+  font-size: 1.1rem;
+}
+
+.button {
+  margin-left: 20px;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  padding: 0 10px;
+  background-color: green;
+  color: ghostwhite;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darkgreen;
+}
+
+.success-block {
+  display: none;
+  color: #dadce0;
+  background-color: green;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.alert-block {
+  display: none;
+  color: #dadce0;
+  background-color: indianred;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
